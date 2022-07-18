@@ -4,10 +4,32 @@ var filtro
 var imagenOriginal
 var imagenFiltrada
 
-function aplicarFiltros() {
-    imagenOriginal = document.getElementById('original')
-    imagenFiltrada = document.getElementById('canvas')
+var url = "https://picsum.photos/200/200"
+var name = 'imagen.jpg'
 
+function getImage() {
+    
+    fetch(url).then(resp => resp.blob())
+    .then(blob => {
+        url = window.URL.createObjectURL(blob)
+        const a = document.createElement('a')
+        a.style.display = 'none'
+        a.href = url
+        a.download = name
+        document.body.appendChild(a)
+        a.click()
+        window.URL.revokeObjectURL(url)
+    })
+    .catch(() => alert('error'))
+
+    imagenOriginal = document.getElementById('original')
+}
+
+function aplicarFiltros() {
+    
+    imagenFiltrada = document.getElementById('canvas')
+    imagenOriginal = document.getElementById('original')
+    
     filtro1 = LenaJS["mirror"]
     LenaJS.filterImage(imagenFiltrada, filtro1, imagenOriginal)
     LenaJS.redrawCanvas(imagenFiltrada, filtro1)
@@ -16,7 +38,7 @@ function aplicarFiltros() {
         filtro = LenaJS["grayscale"]
         LenaJS.redrawCanvas(imagenFiltrada, filtro)
     }
-    
+
     if (document.getElementById('sepia').checked) {
         filtro = LenaJS["sepia"]
         LenaJS.redrawCanvas(imagenFiltrada, filtro)
@@ -87,3 +109,4 @@ function aplicarFiltros() {
         LenaJS.redrawCanvas(imagenFiltrada, filtro)
     }
 }
+
