@@ -1,3 +1,19 @@
+*{
+    padding: 0%;
+    color: white;
+}
+
 body{
-    padding: 10%;
+    background-color: rgb(38, 39, 102);
+    padding: 0%;
+    margin: 0%;
+    border: 0ch;
+}
+
+#cabezera{
+    background-color:rgb(34 29 23);
+}
+
+#pie_de_pagina{
+    background-color:rgb(34 29 23);
 }
