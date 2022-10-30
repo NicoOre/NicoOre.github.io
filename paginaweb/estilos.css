@@ -1,0 +1,65 @@
+html{
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+}
+
+*{
+    color: white;
+    margin: 0%;
+    padding: 0%;
+    float: left;
+    min-height: auto;
+    max-height: 100%;
+    word-wrap: break-word;
+}
+
+ul{
+    list-style: none;
+}
+
+#cabezera, #pie {
+    background-color: #221d17;
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+}
+
+#cuerpo{
+    background-color: #262766;
+    width: 100%;
+    height: 80%;
+    overflow-y: auto;
+}
+
+#logotipo{
+    width: 5%;
+    margin: 0% 2% 0% 2%;
+}
+
+#pie img{
+    width: 100%;
+}
+
+#pie a{
+    width: 4%;
+    margin: 0% 15% 0% 15%;
+}
+
+#cabezera ul{
+    width: 91%;
+    padding: 0% 3% 0% 3%;
+}
+
+#cabezera li{
+    text-align: center;
+    width: 10%;
+    margin: 0% 7.5% 0% 7.5%;
+    background-color: #262766;
+}
+
