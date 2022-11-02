@@ -60,13 +60,15 @@ ul{
     padding: 0% 3% 0% 3%;
 }
 
-#cabezera li :hover{
+#cabezera ul :hover{
     background-color: #15165e;
 }
 
 #cabezera li{
     text-align: center;
     background-color: #262766;
+    width: 10%;
+    margin: 0% 7.5% 0% 7.5%;
 }
 
 #cuerpo img, #cuerpo p, #cuerpo ul{
